@@ -10,43 +10,20 @@
 // What are the implications of the ability of a function to return a value?
 //to make sure the vaule on console is displayed.
 
+// 2. Palindrome again.
+
+const checkPlindrome = (string) => {
+	const word = string;
+	const split = string.split("");
+	const reverse = split.reverse("");
+	const join = reverse.join("");
+	if (word == join) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(checkPlindrome("radar"));
+console.log(checkPlindrome("borscht"));
