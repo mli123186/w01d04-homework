@@ -111,9 +111,6 @@ const checkPrime = (num) => {
 		return false;
 	}
 
-	// if (num % Math.sqrt(num) !== 0) {
-	// 	return true;
-	// }
 	if (num === 2) {
 		return true;
 	}
@@ -130,16 +127,21 @@ const checkPrime = (num) => {
 		
 
 
-// console.log(checkPrime(91));
+console.log(checkPrime(91));
 
-// const printPrimes = (prim) => {
-// 	for (let i = 0; i < prim; i++ ){
-		
+const printPrimes = (prim) => {
 
-// 	}
 
-// }
+	for (let i = 1; i <= prim; i++ ){
 
+		if (checkPrime(i) === true) {
+
+		console.log(i);
+	}
+
+}
+}
+printPrimes(97);
 
 
 
