@@ -25,26 +25,51 @@
 // }
 //make it to array , friend helped with this problem.
 
-// console.log(checkPlindrome("radar"));
-// console.log(checkPlindrome("borscht"));
+const checkPlindrome = (string) => {
+	const word = string;
+	
+	for (let i = 0; i < word.length; i ++) {
+		if (word[i].toLowerCase() == word[word.length - 1 - i].toLowerCase()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+console.log(checkPlindrome("Radar"));
+console.log(checkPlindrome("Borscht"));
 
 //3. Digit Sum
 //Write a function sumDigits that accepts a number and returns the sum of its digits.
 
+// const sumDigits = (number) => {
+
+// 	let sumNumber = 0;
+// 	while (number > 0) {
+		
+// 		sumNumber += (number % 10);
+// 		number = Math.floor(number/10);
+		
+
+// 	} 
+// 	console.log(sumNumber);
+// }
+// sumDigits(12);//friednd helped with this problem
+// //make it to array!
+
 const sumDigits = (number) => {
-
+	const array = number.toString().split("");
+	
 	let sumNumber = 0;
-	while (number > 0) {
-		
-		sumNumber += (number % 10);
-		number = Math.floor(number/10);
-		
-
-	} 
-	console.log(sumNumber);
-}
-sumDigits(12);//friednd helped with this problem
-//make it to array!
+	
+	for (let i = 0; i < array.length; i++) {
+		//let sumNumber = 0;
+		sumNumber += Number(array[i]);
+	}
+	return sumNumber;
+}  
+console.log(sumDigits(12));
 
 //4. Pythagoras
  
@@ -59,9 +84,9 @@ const calculateSide = (sideA, sideB) => {
 
 console.log(calculateSide(8, 6));
 
-// 5. Sum Array
-//Write a function sumArray that takes an array as an argument. The array should contain numbers. 
-//The function should return the sum of the numbers in the array.
+// // 5. Sum Array
+// //Write a function sumArray that takes an array as an argument. The array should contain numbers. 
+// //The function should return the sum of the numbers in the array.
 const sumArray = (array) => {
 	const newArray = array;
 	let sum = 0;
